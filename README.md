@@ -13,15 +13,10 @@ the analysis of blogs and online product reviews, the demographics of people tha
 The focus is on author profiling in social media since we are mainly interested in everyday language and how it reflects 
 basic social and personality processes.
 
-
 # Task
 
 The focus was on gender identification in Twitter, where text and images may be used as information sources.
-The languages:
-
-English
-Spanish
-Arabic
+The languages:English, Spanish , and Arabic
 
 # Training Corpus
 
@@ -30,6 +25,32 @@ For each author, a total of 100 tweets and 10 images are provided. Authors are g
 tweets: English, Arabic and Spanish.
 
 Dataset: https://s3.amazonaws.com/autoritas.pan/pan18-author-profiling-training-2018-02-27.zip
+
+# Output
+
+The software must take as input the absolute path to an unpacked dataset, and has to output for each document of the dataset
+a corresponding XML file that looks like this:
+
+  <author id="author-id"
+	  lang="en|es|ar"
+	  gender_txt="male|female"
+	  gender_img="male|female"
+	  gender_comb="male|female"
+  />
+
+# Code
+
+For traing (over only text), the python files are:
+
+Engilsh_train.py
+Spanish_train.py
+Arabic_train.py
+
+For testing (over only text), the python files are:
+
+Engilsh_test.py
+Spanish_test.py
+Arabic_test.py
 
 # Reference
 
