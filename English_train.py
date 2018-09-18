@@ -315,4 +315,3 @@ with open(model_path, 'w+') as json_file:
 model.save_weights(os.path.join(modelDir,'en_model.h5'))
 
 # print('saved model!')
-
